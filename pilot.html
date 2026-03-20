@@ -467,12 +467,13 @@
       gap: 56px; align-items: start;
     }
     .founder-avatar {
-      width: 96px; height: 96px; border-radius: 50%;
-      background: linear-gradient(135deg, #D4A017 0%, #f5c842 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 42px; font-weight: 800; color: #080808;
-      flex-shrink: 0;
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--gold);
+      overflow: hidden; flex-shrink: 0;
+      box-shadow: 0 0 0 6px rgba(212,160,23,0.12);
+    }
+    .founder-avatar img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
     }
     .founder-content p { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 680px; }
     .founder-stats {
@@ -929,16 +930,17 @@
 <section id="founder">
   <div class="container">
     <div class="founder-inner fade-up">
-      <div class="founder-avatar">C</div>
+      <div class="founder-avatar"><img src="chris-longo.jpg" alt="Chris Longo" /></div>
       <div class="founder-content">
         <span class="label">Who's behind EcomKings</span>
-        <h2 style="margin:12px 0 20px">Built By Someone<br/>Who's Done It.</h2>
+        <h2 style="margin:12px 0 4px">Chris Longo</h2>
+        <p style="color:var(--gold);font-weight:600;font-size:14px;margin-bottom:20px;letter-spacing:0.04em;">Founder, EcomKings</p>
         <p>Over the past decade, Chris has built and scaled multiple digital businesses to 8 figures in combined revenue — managing millions in paid ad spend across Google, Meta, and beyond. He knows how to turn ad dollars into revenue, how to build conversion systems that actually work, and how to scale a business fast using digital channels.</p>
         <p style="margin-top:16px;">What sets him apart isn't just the numbers — it's the breadth. Ecommerce, lead gen, info products, direct response — he's driven growth across industries. Now he's bringing that entire playbook exclusively to blue collar businesses, a world that's been underserved by real digital expertise for far too long.</p>
         <div class="founder-stats">
           <div class="founder-stat">
-            <div class="founder-stat-num">8 figures</div>
-            <div class="founder-stat-label">Combined revenue built</div>
+            <div class="founder-stat-num">$30M+</div>
+            <div class="founder-stat-label">In revenue & sales built</div>
           </div>
           <div class="founder-stat">
             <div class="founder-stat-num">10+ years</div>
