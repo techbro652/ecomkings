@@ -134,7 +134,13 @@
       text-transform: uppercase; color: var(--gold);
     }
     .hero-headline { max-width: 900px; margin: 0 auto 28px; }
-    .hero-headline em { font-style: normal; color: var(--gold); }
+    .hero-headline em {
+      font-style: normal;
+      background: linear-gradient(135deg, #D4A017 0%, #f5c842 60%, #ffe88a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     .hero-sub {
       max-width: 600px; font-size: 18px; color: #AAA9A0;
       line-height: 1.7; margin: 0 auto 44px;
