@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcomKings — Free 30-Day Email Retention Program (2 Spots Left)</title>
+  <meta name="description" content="We're looking for 2-3 Shopify brands to get our full email & retention service completely free for 30 days. No cost. No catch. Just results — and honest feedback." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:     #D4A017;
+      --gold-dim: #a87d10;
+      --gold-glow: rgba(212,160,23,0.12);
+      --bg:       #080808;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #252520;
+      --text:     #F0EFE8;
+      --muted:    #7A7A72;
+      --danger:   #c0392b;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    h1, h2, h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(42px, 7vw, 88px); font-weight: 800; }
+    h2 { font-size: clamp(34px, 5vw, 62px); font-weight: 800; }
+    h3 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; }
+
+    .gold-line { width: 48px; height: 3px; background: var(--gold); margin: 0 auto; }
+    .gold-line.left { margin: 0; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 4px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px;
+      cursor: pointer; transition: all 0.2s ease; border: none;
+    }
+    .btn-primary { background: var(--gold); color: #080808; }
+    .btn-primary:hover { background: #e8b520; transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-lg { padding: 18px 36px; font-size: 17px; }
+
+    /* ─── SPOTS BANNER ─── */
+    .spots-banner {
+      background: var(--gold);
+      color: #080808;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,8,8,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between; height: 68px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-mark { width: 36px; height: 36px; }
+    .logo-text {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+      font-size: 22px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text);
+    }
+    .logo-text span { color: var(--gold); }
+
+    /* ─── HERO ─── */
+    #hero {
+      padding: 80px 0;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(212,160,23,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(212,160,23,0.4);
+      background: rgba(212,160,23,0.06);
+      border-radius: 100px; padding: 6px 14px; margin-bottom: 28px;
+    }
+    .hero-tag .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero-tag span {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .hero-headline { max-width: 900px; margin-bottom: 28px; }
+    .hero-headline em { font-style: normal; color: var(--gold); }
+    .hero-sub {
+      max-width: 600px; font-size: 18px; color: #AAA9A0;
+      line-height: 1.7; margin-bottom: 44px;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+
+    /* Spot tracker */
+    .spots-tracker {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 32px;
+    }
+    .spot-indicator {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 13px; font-weight: 600;
+    }
+    .spot-indicator .dot-taken {
+      width: 10px; height: 10px; border-radius: 50%; background: #c0392b; flex-shrink: 0;
+    }
+    .spot-indicator .dot-open {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0;
+    }
+    .spot-indicator.open-spot { border-color: rgba(212,160,23,0.4); color: var(--gold); }
+    .spot-indicator.taken-spot { color: var(--muted); }
+
+    .hero-trust {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--muted);
+    }
+    .hero-trust .check { color: var(--gold); font-size: 14px; }
+
+    /* Metrics */
+    .hero-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden; margin-top: 80px;
+    }
+    .hero-metric { background: var(--surface); padding: 28px 32px; text-align: center; }
+    .hero-metric .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px; font-weight: 800; color: var(--gold);
+      line-height: 1; margin-bottom: 6px;
+    }
+    .hero-metric .desc { font-size: 13px; color: var(--muted); letter-spacing: 0.02em; }
+
+    @media (max-width: 640px) { .hero-metrics { grid-template-columns: 1fr; } }
+
+    /* ─── WHAT YOU GET ─── */
+    #what-you-get { background: var(--surface); }
+    .section-header { margin-bottom: 64px; }
+    .section-header h2 { margin: 12px 0; }
+    .section-header p { max-width: 560px; margin: 16px auto 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+    .get-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; text-align: left;
+    }
+    .get-card { background: var(--bg); padding: 36px 32px; position: relative; }
+    .get-icon {
+      width: 44px; height: 44px;
+      background: var(--gold-glow); border: 1px solid rgba(212,160,23,0.2);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .get-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .get-card h3 { font-size: 20px; margin-bottom: 10px; font-weight: 700; letter-spacing: 0.02em; }
+    .get-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .value-tag {
+      display: inline-block; margin-top: 16px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); background: var(--gold-glow); padding: 4px 10px; border-radius: 3px;
+    }
+
+    @media (max-width: 768px) { .get-grid { grid-template-columns: 1fr; } }
+
+    /* ─── THE DEAL ─── */
+    #the-deal { background: var(--bg); text-align: center; }
+    .deal-box {
+      max-width: 800px; margin: 56px auto 0;
+      background: var(--surface);
+      border: 1px solid var(--border); border-radius: 10px; padding: 64px 56px;
+      position: relative; overflow: hidden;
+    }
+    .deal-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gold);
+    }
+    .deal-box .deal-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 64px; font-weight: 800; color: var(--gold);
+      line-height: 1; margin-bottom: 16px;
+    }
+    .deal-box h3 {
+      font-size: 36px; font-weight: 800; margin-bottom: 20px; color: var(--text);
+    }
+    .deal-box > p {
+      font-size: 17px; color: var(--muted); line-height: 1.7;
+      max-width: 600px; margin: 0 auto 40px;
+    }
+    .deal-items {
+      display: flex; flex-direction: column; gap: 16px;
+      text-align: left; max-width: 520px; margin: 0 auto 40px;
+    }
+    .deal-item { display: flex; align-items: flex-start; gap: 14px; font-size: 16px; color: var(--text); }
+    .deal-check {
+      width: 26px; height: 26px;
+      background: var(--gold-glow); border: 1px solid rgba(212,160,23,0.3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold); font-size: 13px; margin-top: 2px;
+    }
+    .deal-note { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 640px) { .deal-box { padding: 36px 24px; } }
+
+    /* ─── WHO WE WANT ─── */
+    #who { background: var(--surface); text-align: center; }
+    .who-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; margin-top: 56px; text-align: left;
+    }
+    .who-card { background: var(--bg); padding: 32px 28px; }
+    .who-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px; font-weight: 800; color: var(--border);
+      line-height: 1; margin-bottom: 12px;
+    }
+    .who-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+    .who-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    @media (max-width: 768px) { .who-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .who-grid { grid-template-columns: 1fr; } }
+
+    /* ─── HOW IT WORKS ─── */
+    #process { background: var(--bg); text-align: center; }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; margin-top: 56px; text-align: left;
+    }
+    .process-step { background: var(--surface); padding: 36px 28px; position: relative; }
+    .step-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px; font-weight: 800; color: var(--border);
+      line-height: 1; position: absolute; top: 16px; right: 20px; user-select: none;
+    }
+    .step-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .process-step h3 { font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative; }
+    .process-step p { font-size: 14px; color: var(--muted); line-height: 1.65; position: relative; }
+
+    @media (max-width: 900px) { .process-steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .process-steps { grid-template-columns: 1fr; } }
+
+    /* ─── WHAT WE BUILD ─── */
+    #deliverables { background: var(--surface); }
+    .deliverables-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start; margin-top: 56px;
+    }
+    .deliverables-list {
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .deliverable-item {
+      display: flex; gap: 18px;
+      padding: 22px 0; border-bottom: 1px solid var(--border);
+    }
+    .deliverable-item:first-child { padding-top: 0; }
+    .del-check {
+      width: 28px; height: 28px;
+      background: var(--gold-glow); border: 1px solid rgba(212,160,23,0.25);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .del-check svg { width: 14px; height: 14px; stroke: var(--gold); stroke-width: 2.5; fill: none; }
+    .del-content h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .del-content p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .deliverables-value {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 40px 36px;
+      position: sticky; top: 100px;
+    }
+    .value-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted); margin-bottom: 24px;
+    }
+    .value-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+      font-size: 14px; color: var(--muted);
+    }
+    .value-row:last-of-type { border-bottom: none; }
+    .value-row .amt { font-weight: 600; color: var(--text); }
+    .value-total {
+      margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--gold);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .value-total .label { font-size: 14px; font-weight: 700; color: var(--text); }
+    .value-total .total-amt {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px; font-weight: 800; color: var(--gold); line-height: 1;
+    }
+    .value-free {
+      margin-top: 20px; text-align: center;
+      font-size: 22px; font-weight: 800;
+      font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.04em;
+      color: var(--text); text-transform: uppercase;
+    }
+    .value-free span { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .deliverables-grid { grid-template-columns: 1fr; gap: 40px; }
+      .deliverables-value { position: static; }
+    }
+
+    /* ─── FAQ ─── */
+    #faq { text-align: center; }
+    .faq-list { margin-top: 48px; text-align: left; max-width: 760px; margin-left: auto; margin-right: auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; padding: 22px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      cursor: pointer; text-align: left;
+    }
+    .faq-q span { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .faq-icon {
+      width: 22px; height: 22px; border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold); font-size: 16px; transition: transform 0.2s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { display: none; padding: 0 0 22px; font-size: 15px; color: var(--muted); line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ─── FINAL CTA ─── */
+    #apply {
+      background: var(--surface); text-align: center;
+      position: relative; overflow: hidden;
+    }
+    #apply::before {
+      content: ''; position: absolute;
+      bottom: -150px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(212,160,23,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner { max-width: 680px; margin: 0 auto; position: relative; }
+    .cta-inner h2 { margin: 16px 0; }
+    .cta-inner > p { color: var(--muted); font-size: 17px; line-height: 1.7; margin-bottom: 40px; }
+    .apply-form {
+      display: flex; flex-direction: column; gap: 12px;
+      max-width: 460px; margin: 0 auto 24px;
+    }
+    .apply-form input {
+      width: 100%; padding: 16px 18px;
+      background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+      color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px;
+      outline: none; transition: border-color 0.2s;
+    }
+    .apply-form input::placeholder { color: var(--muted); }
+    .apply-form input:focus { border-color: var(--gold); }
+    .apply-form .btn-primary { width: 100%; justify-content: center; }
+    .cta-trust-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; flex-wrap: wrap; margin-top: 20px;
+    }
+    .cta-trust-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--muted);
+    }
+    .cta-trust-item svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
+    .spots-warning {
+      margin-top: 28px; padding: 16px 24px;
+      background: rgba(212,160,23,0.06); border: 1px solid rgba(212,160,23,0.2);
+      border-radius: 6px; font-size: 14px; color: var(--gold); font-weight: 600;
+    }
+
+    /* ─── FOOTER ─── */
+    footer { border-top: 1px solid var(--border); padding: 48px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ─── SPOTS BANNER ─── -->
+<div class="spots-banner">
+  🔥 Founding Client Program — 3 spots total. 2 claimed. 1 remaining. First-come, first-served.
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="7" fill="#D4A017" fill-opacity="0.1"/>
+        <rect x="0.5" y="0.5" width="35" height="35" rx="6.5" stroke="#D4A017" stroke-opacity="0.3"/>
+        <path d="M7 24L9.5 13L15 19L18 11L21 19L26.5 13L29 24H7Z" fill="#D4A017" opacity="0.9"/>
+        <rect x="7" y="25" width="22" height="2.5" rx="1.25" fill="#D4A017"/>
+        <circle cx="18" cy="11" r="1.5" fill="#fff" opacity="0.9"/>
+        <circle cx="9.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+        <circle cx="26.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+      </svg>
+      <span class="logo-text">Ecom<span>Kings</span></span>
+    </a>
+    <a href="#apply" class="btn btn-primary">Apply for the Last Spot →</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <div class="dot"></div>
+      <span>Founding Client Program · 30 Days · Zero Cost</span>
+    </div>
+
+    <h1 class="hero-headline">
+      WE'LL BUILD YOUR<br/>
+      ENTIRE EMAIL PROGRAM.<br/>
+      <em>FREE FOR 30 DAYS.</em>
+    </h1>
+
+    <p class="hero-sub">
+      EcomKings is a new email & retention agency for Shopify brands. We're looking for 2–3 founding clients to work with for free — full service, no cost, no catch. You get the results. We get a case study. Everyone wins.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#apply" class="btn btn-primary btn-lg">Apply for the Last Free Spot →</a>
+      <a href="#what-you-get" class="btn btn-ghost btn-lg">See What's Included ↓</a>
+    </div>
+
+    <div class="spots-tracker">
+      <div class="spot-indicator taken-spot">
+        <div class="dot-taken"></div> Spot 1 — Claimed
+      </div>
+      <div class="spot-indicator taken-spot">
+        <div class="dot-taken"></div> Spot 2 — Claimed
+      </div>
+      <div class="spot-indicator open-spot">
+        <div class="dot-open"></div> Spot 3 — Available
+      </div>
+    </div>
+
+    <div class="hero-trust">
+      <span class="check">✓</span>&nbsp;$0 cost for 30 days &nbsp;
+      <span class="check">✓</span>&nbsp;Full Klaviyo build &nbsp;
+      <span class="check">✓</span>&nbsp;No obligation after &nbsp;
+      <span class="check">✓</span>&nbsp;You keep everything we build
+    </div>
+
+    <div class="hero-metrics fade-up">
+      <div class="hero-metric">
+        <div class="num">30%+</div>
+        <div class="desc">Email revenue share top Shopify brands generate</div>
+      </div>
+      <div class="hero-metric">
+        <div class="num">30 days</div>
+        <div class="desc">From onboarding call to live flows generating revenue</div>
+      </div>
+      <div class="hero-metric">
+        <div class="num">$0</div>
+        <div class="desc">Your cost for the entire founding client program</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT YOU GET ─── -->
+<section id="what-you-get">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;">
+      <span class="label">What's included</span>
+      <h2 style="margin:12px 0">The Full Retention Stack.<br/>Done For You. Free.</h2>
+      <p>This isn't a watered-down trial. You get the complete EcomKings service — every flow, every campaign, fully built and managed — at zero cost for 30 days.</p>
+    </div>
+
+    <div class="get-grid fade-up">
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Core Email Flows</h3>
+        <p>We build your foundational Klaviyo flows from scratch — welcome series, abandoned cart, browse abandonment, and post-purchase. These run 24/7 and generate revenue on autopilot from day one.</p>
+        <span class="value-tag">✓ Included Free</span>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Campaign Management</h3>
+        <p>We write, design, and send 2 email campaigns during your 30 days. Copy, templates, scheduling — all handled. You review and approve before anything goes out.</p>
+        <span class="value-tag">✓ Included Free</span>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>List Segmentation</h3>
+        <p>We segment your list by purchase behavior — VIPs, first-time buyers, at-risk customers. Relevant emails to the right people means higher open rates and more revenue per send.</p>
+        <span class="value-tag">✓ Included Free</span>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Deliverability Audit</h3>
+        <p>We audit your sender reputation, clean your list, and make sure your emails land in the inbox — not the spam folder. Deliverability is the foundation everything else is built on.</p>
+        <span class="value-tag">✓ Included Free</span>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="20" x2="12" y2="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="20" x2="6" y2="14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Revenue Attribution Report</h3>
+        <p>At the end of 30 days, you get a full report showing exactly what email generated — attributed revenue, open rates, conversions. No vanity metrics, just what actually made you money.</p>
+        <span class="value-tag">✓ Included Free</span>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>You Own Everything</h3>
+        <p>Every flow, template, and segment we build lives in your Klaviyo account. If you walk away after 30 days, you keep all of it. No holdbacks, no access revocation. It's 100% yours.</p>
+        <span class="value-tag">✓ Always Yours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── THE DEAL ─── -->
+<section id="the-deal">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;">
+      <span class="label">The exchange</span>
+      <h2 style="margin:12px 0">Here's Exactly<br/>What We Ask For.</h2>
+    </div>
+
+    <div class="deal-box fade-up">
+      <div class="deal-label">🤝</div>
+      <h3>Simple Trade. No Strings.</h3>
+      <p>We're a new agency building our track record. We'll deliver the full service for free — in exchange for three small things at the end of your 30 days.</p>
+
+      <div class="deal-items">
+        <div class="deal-item">
+          <div class="deal-check">✓</div>
+          <div><strong>Honest feedback</strong> — a 15-minute debrief call to tell us what worked and what didn't. That's it.</div>
+        </div>
+        <div class="deal-item">
+          <div class="deal-check">✓</div>
+          <div><strong>A written testimonial</strong> — only if you're happy with the results. Zero pressure if you're not.</div>
+        </div>
+        <div class="deal-item">
+          <div class="deal-check">✓</div>
+          <div><strong>Permission to share your results</strong> — anonymized metrics we can use as a case study on our website.</div>
+        </div>
+      </div>
+
+      <p class="deal-note">That's the entire deal. If you love it and want to continue after 30 days, we'll talk about what an ongoing engagement looks like. If not, no hard feelings — you walk away with a fully built email program and we walk away with proof of what we can do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHO WE WANT ─── -->
+<section id="who">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;">
+      <span class="label">Who this is for</span>
+      <h2 style="margin:12px 0">We're Selective.<br/>Here's Who Qualifies.</h2>
+      <p>We only have one spot left. We want a brand where we can drive clear, measurable results in 30 days.</p>
+    </div>
+
+    <div class="who-grid fade-up">
+      <div class="who-card">
+        <div class="who-num">01</div>
+        <h3>Shopify brand</h3>
+        <p>You're on Shopify (or Shopify Plus) and have a real product catalog with existing customers. We're an ecommerce-only agency — no SaaS, no services.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-num">02</div>
+        <h3>Doing $10K+/mo in revenue</h3>
+        <p>You need enough order volume for the flows to generate meaningful results. Under $10K/month, the math is harder to prove in 30 days.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-num">03</div>
+        <h3>Have an email list</h3>
+        <p>Even a small list of 500–1,000 past customers is enough. We'll segment it properly and run flows that re-engage them and capture new leads going forward.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-num">04</div>
+        <h3>Not fully set up on Klaviyo</h3>
+        <p>You either haven't set up email automation yet, or what you have is basic and you know it could be doing more. That's exactly where we do our best work.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-num">05</div>
+        <h3>Ready to move fast</h3>
+        <p>We'll be live within 30 days of your onboarding call. We move fast because you're leaving money on the table every day this isn't set up.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-num">06</div>
+        <h3>Open to honest feedback</h3>
+        <p>This is a two-way relationship. We'll tell you what we think about your email program — we need you to tell us what you think about ours. That's how we both get better.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;">
+      <span class="label">The process</span>
+      <h2 style="margin:12px 0">Apply Today.<br/>Live In 30 Days.</h2>
+      <p>Four steps from application to a fully running email program generating attributable revenue for your store.</p>
+    </div>
+
+    <div class="process-steps fade-up">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-label">Today</div>
+        <h3>Apply</h3>
+        <p>Fill out the short application below. 2 minutes. We review every application personally and respond within 24 hours to confirm if you're a fit.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-label">Day 1</div>
+        <h3>Onboarding Call</h3>
+        <p>A 20-minute call to learn your brand — voice, products, customers, goals. We get Klaviyo access. That's the most time you'll spend with us the entire month.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-label">Week 1–4</div>
+        <h3>We Build & Run Everything</h3>
+        <p>Flows go live, campaigns go out, list gets segmented. You review and approve anything we write. We handle all the builds, sends, and optimizations.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-label">Day 30</div>
+        <h3>Results & Debrief</h3>
+        <p>You get a full revenue attribution report. We get on a 15-minute call to share feedback. You keep everything we built. Simple as that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT WE BUILD ─── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="deliverables-grid">
+      <div class="fade-up">
+        <span class="label">What we build</span>
+        <h2 style="margin:12px 0 32px">The Full<br/>30-Day Buildout</h2>
+        <div class="deliverables-list">
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>Welcome Series (3 emails)</h4>
+              <p>Introduce new subscribers to your brand, drive a first purchase, and set the tone for your relationship with every new lead.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>Abandoned Cart Flow (3 emails)</h4>
+              <p>Recover the ~70% of shoppers who leave without buying. Typically our highest-revenue flow for most brands within the first month.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>Post-Purchase Flow (2 emails)</h4>
+              <p>Thank buyers, encourage reviews, and plant the seed for a second purchase — the most profitable customer you'll ever get.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>2 Broadcast Campaigns</h4>
+              <p>Written and designed by us — one mid-month send, one end-of-month send. You approve the copy before it goes out.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>List Segmentation Setup</h4>
+              <p>VIP segment, engaged subscribers, lapsed customers, and new leads — all segmented properly so every email hits the right people.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>Deliverability Audit + Fixes</h4>
+              <p>Sender reputation check, list hygiene, and inbox placement tests. We make sure your emails get delivered before any of the above goes live.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="del-content">
+              <h4>Revenue Attribution Report</h4>
+              <p>Full 30-day breakdown of what email generated — by flow, by campaign, total attributed revenue. Everything tracked and reported clearly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="deliverables-value">
+          <div class="value-title">Retail value of this buildout</div>
+          <div class="value-row">
+            <span>Welcome series (3 emails)</span>
+            <span class="amt">$800</span>
+          </div>
+          <div class="value-row">
+            <span>Abandoned cart flow (3 emails)</span>
+            <span class="amt">$1,200</span>
+          </div>
+          <div class="value-row">
+            <span>Post-purchase flow (2 emails)</span>
+            <span class="amt">$600</span>
+          </div>
+          <div class="value-row">
+            <span>2 broadcast campaigns</span>
+            <span class="amt">$800</span>
+          </div>
+          <div class="value-row">
+            <span>List segmentation setup</span>
+            <span class="amt">$400</span>
+          </div>
+          <div class="value-row">
+            <span>Deliverability audit + fixes</span>
+            <span class="amt">$300</span>
+          </div>
+          <div class="value-row">
+            <span>Revenue attribution report</span>
+            <span class="amt">$200</span>
+          </div>
+          <div class="value-total">
+            <span class="label">Total value</span>
+            <span class="total-amt">$4,300</span>
+          </div>
+          <div class="value-free">Your cost: <span>$0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">FAQ</span>
+      <h2 style="margin:12px 0">Common Questions</h2>
+    </div>
+
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is this actually free? What's the catch?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">Yes — 100% free for 30 days. No credit card, no contract, no hidden fees. We're a new agency and we want 2–3 brands we can do great work for and use as case studies. In exchange for the free service, we ask for honest feedback and a testimonial if you're happy. That's it.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What happens after 30 days?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">We have a short debrief call to review your results. If you want to continue working together, we'll walk you through what an ongoing engagement looks like. If not, no pressure — you walk away with a fully built email program and everything we built stays in your Klaviyo account. We don't auto-charge anything.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Do I need to provide copy or design assets?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">No. We handle copy, design, and builds entirely. During your onboarding call, we'll learn your brand voice, product catalog, and audience. After that, we produce everything and send it to you for approval before anything goes live.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>I already have some flows in Klaviyo. Does that matter?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">That's great — we'll audit what you have, keep what's working, rebuild what isn't, and fill the gaps. We don't blow up systems that are already generating revenue. Starting from something is always better than zero.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How much of my time does this require?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">About 35 minutes total — a 20-minute onboarding call at the start, a few quick email approvals during the month (takes minutes each), and a 15-minute debrief call at the end. Outside of that, we handle everything. You run your store.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Who do I keep as my contact at EcomKings?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">You'll have a dedicated strategist as your single point of contact throughout the 30 days. You'll communicate directly with the person doing the work — not an account manager who passes messages to a team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section id="apply">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <span class="label">Apply Now</span>
+      <h2>1 Spot Left.<br/>Don't Sit On This.</h2>
+      <p>
+        Apply below. We review every application personally and respond within 24 hours. If you're a fit, we'll book your onboarding call and be live before the end of the week.
+      </p>
+
+      <form class="apply-form" name="founding-client" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="founding-client" />
+        <input type="text" id="name-input" name="name" placeholder="Your name" autocomplete="name" required />
+        <input type="text" id="store-input" name="store" placeholder="Your Shopify store URL" required />
+        <input type="email" id="email-input" name="email" placeholder="Email address" autocomplete="email" required />
+        <input type="tel" id="phone-input" name="phone" placeholder="Phone number (optional)" autocomplete="tel" />
+        <button type="submit" class="btn btn-primary btn-lg">Apply for the Last Free Spot →</button>
+      </form>
+
+      <div class="cta-trust-row">
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          No obligation
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/><polyline points="12 6 12 12 16 14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Response in 24 hrs
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          $0 for 30 days
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          You keep everything we build
+        </div>
+      </div>
+
+      <div class="spots-warning">
+        ⚡ 2 of 3 founding client spots have been claimed. This program closes when the last spot fills — and we don't have a waitlist.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:8px;display:inline-flex">
+          <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="7" fill="#D4A017" fill-opacity="0.1"/>
+            <rect x="0.5" y="0.5" width="35" height="35" rx="6.5" stroke="#D4A017" stroke-opacity="0.3"/>
+            <path d="M7 24L9.5 13L15 19L18 11L21 19L26.5 13L29 24H7Z" fill="#D4A017" opacity="0.9"/>
+            <rect x="7" y="25" width="22" height="2.5" rx="1.25" fill="#D4A017"/>
+            <circle cx="18" cy="11" r="1.5" fill="#fff" opacity="0.9"/>
+            <circle cx="9.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="26.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text" style="font-size:18px">Ecom<span>Kings</span></span>
+        </a>
+        <div class="footer-copy">© 2026 EcomKings. All rights reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="/">Main Site</a>
+        <a href="mailto:hello@ecomkings.com">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data = new URLSearchParams({
+      'form-name': 'founding-client',
+      name: document.getElementById('name-input').value,
+      store: document.getElementById('store-input').value,
+      email: document.getElementById('email-input').value,
+      phone: document.getElementById('phone-input').value,
+    });
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data.toString(),
+    })
+      .then(() => {
+        form.innerHTML = '<p style="color:var(--gold);font-size:1.15rem;font-weight:600;text-align:center;padding:32px 0;">✓ Application received — we\'ll be in touch within 24 hours.</p>';
+      })
+      .catch(() => {
+        btn.textContent = 'Apply for the Last Free Spot →';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      });
+  }
+</script>
+</body>
+</html>
