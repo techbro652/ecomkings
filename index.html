@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcomKings — Ecommerce Email & Retention Agency</title>
+  <meta name="description" content="EcomKings helps Shopify brands unlock 30–40% more revenue from their email list. Klaviyo flows, campaigns, SMS, segmentation. Book a free audit today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:     #D4A017;
+      --gold-dim: #a87d10;
+      --gold-glow: rgba(212,160,23,0.12);
+      --bg:       #080808;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #252520;
+      --text:     #F0EFE8;
+      --muted:    #7A7A72;
+      --danger:   #c0392b;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── TYPOGRAPHY HELPERS ─── */
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    h1, h2, h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(42px, 7vw, 88px); font-weight: 800; }
+    h2 { font-size: clamp(34px, 5vw, 62px); font-weight: 800; }
+    h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 700; }
+
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section { padding: 96px 0; }
+
+    /* ─── DIVIDERS ─── */
+    .gold-line {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+    .gold-line.left { margin: 0; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #080808;
+    }
+    .btn-primary:hover { background: #e8b520; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-lg { padding: 18px 36px; font-size: 17px; }
+
+    /* ══════════════════════════════════════════
+       NAV
+    ══════════════════════════════════════════ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+    }
+    .logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+    .logo-text span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ══════════════════════════════════════════
+       ANNOUNCEMENT BAR
+    ══════════════════════════════════════════ */
+    .announce-bar {
+      background: var(--gold);
+      color: #080808;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .announce-bar a { color: #080808; text-decoration: underline; }
+
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    #hero {
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(212,160,23,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      margin-bottom: 28px;
+    }
+    .hero-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .hero-tag span {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-headline {
+      max-width: 860px;
+      margin-bottom: 28px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      max-width: 580px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #AAA9A0;
+      line-height: 1.7;
+      margin-bottom: 44px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .hero-trust .check { color: var(--gold); font-size: 14px; }
+
+    /* Metrics row */
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 80px;
+    }
+    .hero-metric {
+      background: var(--surface);
+      padding: 28px 32px;
+      text-align: center;
+    }
+    .hero-metric .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-metric .desc {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 640px) {
+      .hero-metrics { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+       LOGOS / TRUST BAR
+    ══════════════════════════════════════════ */
+    #trust {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-label {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .logo-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.45;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .logo-pill:hover { opacity: 0.7; }
+    .logo-pill svg { width: 20px; height: 20px; fill: var(--text); }
+
+    /* ══════════════════════════════════════════
+       PROBLEM SECTION
+    ══════════════════════════════════════════ */
+    #problem {
+      background: var(--surface);
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .problem-visual {
+      position: relative;
+    }
+    .pie-container {
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .pie-container svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+    .pie-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .pie-center .big {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .pie-center .small {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .pie-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .pie-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .problem-content h2 { margin-bottom: 20px; }
+    .problem-content p {
+      color: #AAA9A0;
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #AAA9A0;
+    }
+    .pain-list li .icon {
+      color: var(--danger);
+      font-size: 18px;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .problem-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════════
+       WHAT WE DO
+    ══════════════════════════════════════════ */
+    #services {
+      text-align: center;
+    }
+    .section-header {
+      margin-bottom: 64px;
+    }
+    .section-header h2 { margin: 12px 0; }
+    .section-header p {
+      max-width: 560px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: left;
+    }
+    .service-card {
+      background: var(--surface);
+      padding: 36px 32px;
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: var(--surface2); }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .service-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-glow);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+       RESULTS / PROOF
+    ══════════════════════════════════════════ */
+    #results {
+      background: var(--surface);
+    }
+    .results-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+    .results-header p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .big-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2px;
+    }
+    .stat-box {
+      background: var(--surface2);
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .stat-box .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1;
+    }
+    .stat-box .stat-num span { color: var(--gold); }
+    .stat-box .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Case study cards */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .case-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .case-card:hover { border-color: var(--gold); }
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+    }
+    .case-brand {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .case-result {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .case-desc {
+      font-size: 15px;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .case-detail {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .case-timeframe {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .results-header { grid-template-columns: 1fr; gap: 24px; }
+      .big-stats { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+       HOW IT WORKS
+    ══════════════════════════════════════════ */
+    #process {
+      text-align: center;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 56px;
+      text-align: left;
+    }
+    .process-step {
+      background: var(--surface);
+      padding: 36px 28px;
+      position: relative;
+    }
+    .step-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: var(--border);
+      line-height: 1;
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      user-select: none;
+    }
+    .step-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .process-step h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .process-step p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      position: relative;
+    }
+
+    @media (max-width: 900px) {
+      .process-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+       WHY US
+    ══════════════════════════════════════════ */
+    #why {
+      background: var(--surface);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .why-points {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .why-point {
+      display: flex;
+      gap: 18px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .why-point:first-child { padding-top: 0; }
+    .why-check {
+      width: 28px;
+      height: 28px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-check svg { width: 14px; height: 14px; stroke: var(--gold); stroke-width: 2.5; fill: none; }
+    .why-point-content h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .why-point-content p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .comparison-table {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .comparison-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      background: var(--surface2);
+      padding: 14px 20px;
+    }
+    .comparison-header span {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+    .comparison-header span:first-child { text-align: left; color: transparent; }
+    .comparison-header .ek-col { color: var(--gold) !important; }
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      padding: 14px 20px;
+      border-top: 1px solid var(--border);
+      align-items: center;
+    }
+    .comparison-row:nth-child(even) { background: rgba(255,255,255,0.015); }
+    .comparison-row .feature {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .comparison-row .val {
+      text-align: center;
+      font-size: 18px;
+    }
+    .val.yes { color: var(--gold); }
+    .val.no { color: #555; }
+
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════════
+       PRICING
+    ══════════════════════════════════════════ */
+    #pricing {
+      text-align: center;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 56px;
+      text-align: left;
+    }
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 36px 28px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .price-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .price-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, rgba(212,160,23,0.05) 0%, var(--surface) 60%);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #080808;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .price-tier {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .price-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .price-target {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .price-amount {
+      margin-bottom: 24px;
+    }
+    .price-amount .amount {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .price-amount .per {
+      font-size: 14px;
+      color: var(--muted);
+      margin-left: 4px;
+    }
+    .price-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .price-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .price-features li .chk {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .price-cta {
+      width: 100%;
+      justify-content: center;
+    }
+    .price-note {
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .price-note span { color: var(--gold); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ══════════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════════ */
+    #testimonials {
+      background: var(--surface);
+      text-align: center;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 56px;
+      text-align: left;
+    }
+    .testi-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px 28px;
+    }
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 18px;
+    }
+    .star {
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+    .testi-quote {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testi-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: #080808;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .testi-role {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+       FAQ
+    ══════════════════════════════════════════ */
+    #faq {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #faq .container { max-width: 760px; }
+    .faq-list {
+      margin-top: 48px;
+      text-align: left;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-q span {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .faq-icon {
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      display: none;
+      padding: 0 0 22px;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ══════════════════════════════════════════
+       FINAL CTA
+    ══════════════════════════════════════════ */
+    #cta-final {
+      background: var(--surface);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212,160,23,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .cta-final-inner h2 { margin: 16px 0; }
+    .cta-final-inner p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .audit-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 460px;
+      margin: 0 auto 20px;
+    }
+    .audit-form input {
+      width: 100%;
+      padding: 16px 18px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .audit-form input::placeholder { color: var(--muted); }
+    .audit-form input:focus { border-color: var(--gold); }
+    .cta-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cta-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .cta-trust-item svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
+
+    .audit-form .btn-primary { width: 100%; justify-content: center; }
+    @media (max-width: 560px) {
+      .audit-form { max-width: 100%; }
+    }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ══════════════════════════════════════════
+       SCROLL ANIMATIONS
+    ══════════════════════════════════════════ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── ANNOUNCEMENT BAR ─── -->
+<div class="announce-bar">
+  🔥 Limited spots: We only take on 5 new clients per month. <a href="#cta-final">Check availability →</a>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <!-- Crown SVG Logo Mark -->
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="7" fill="#D4A017" fill-opacity="0.1"/>
+        <rect x="0.5" y="0.5" width="35" height="35" rx="6.5" stroke="#D4A017" stroke-opacity="0.3"/>
+        <!-- Crown shape -->
+        <path d="M7 24L9.5 13L15 19L18 11L21 19L26.5 13L29 24H7Z" fill="#D4A017" opacity="0.9"/>
+        <rect x="7" y="25" width="22" height="2.5" rx="1.25" fill="#D4A017"/>
+        <!-- Crown jewels -->
+        <circle cx="18" cy="11" r="1.5" fill="#fff" opacity="0.9"/>
+        <circle cx="9.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+        <circle cx="26.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+      </svg>
+      <span class="logo-text">Ecom<span>Kings</span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#cta-final" class="btn btn-primary">Get Free Audit →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <div class="dot"></div>
+      <span>Ecommerce Email &amp; Retention Agency</span>
+    </div>
+
+    <h1 class="hero-headline">
+      YOUR EMAIL LIST<br/>
+      IS WORTH <em>3× MORE</em><br/>
+      THAN YOU'RE MAKING
+    </h1>
+
+    <p class="hero-sub">
+      Most Shopify brands extract less than 15% of their email list's true potential. EcomKings rebuilds your retention channel from the ground up — more revenue, less ad spend.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#cta-final" class="btn btn-primary btn-lg">Get Your Free Email Audit →</a>
+      <a href="#results" class="btn btn-ghost btn-lg">See Our Results ↓</a>
+    </div>
+
+    <div class="hero-trust">
+      <span class="check">✓</span>&nbsp;No contracts &nbsp;
+      <span class="check">✓</span>&nbsp;Klaviyo certified &nbsp;
+      <span class="check">✓</span>&nbsp;Results in 30 days &nbsp;
+      <span class="check">✓</span>&nbsp;Ecommerce-only agency
+    </div>
+
+    <div class="hero-metrics fade-up">
+      <div class="hero-metric">
+        <div class="num">$14M+</div>
+        <div class="desc">Email revenue generated for clients</div>
+      </div>
+      <div class="hero-metric">
+        <div class="num">50+</div>
+        <div class="desc">Shopify brands scaled</div>
+      </div>
+      <div class="hero-metric">
+        <div class="num">38%</div>
+        <div class="desc">Average email revenue share achieved</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TRUST BAR
+══════════════════════════════════════════ -->
+<div id="trust">
+  <div class="container">
+    <div class="trust-label">
+      <span class="label">Trusted platform partners</span>
+    </div>
+    <div class="logo-row">
+      <div class="logo-pill">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        Klaviyo
+      </div>
+      <div class="logo-pill">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Shopify
+      </div>
+      <div class="logo-pill">
+        <svg viewBox="0 0 24 24"><path d="M3 5v14h18V5H3zm8 9H5v-2h6v2zm8-4H5V8h14v2z"/></svg>
+        Postscript
+      </div>
+      <div class="logo-pill">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        Gorgias
+      </div>
+      <div class="logo-pill">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        Attentive
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PROBLEM
+══════════════════════════════════════════ -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-visual fade-up">
+        <div class="pie-container">
+          <svg viewBox="0 0 100 100">
+            <!-- Background circle -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#1a1a18" stroke-width="18"/>
+            <!-- You're currently getting (12%) -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#333330" stroke-width="18"
+              stroke-dasharray="251.2" stroke-dashoffset="0"/>
+            <!-- Untapped revenue (red portion, ~50%) -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#8B2020" stroke-width="18"
+              stroke-dasharray="125.6 125.6" stroke-dashoffset="-30.1"/>
+            <!-- What you could be making (gold, ~38%) -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#D4A017" stroke-width="18"
+              stroke-dasharray="95.5 155.7" stroke-dashoffset="-155.7"/>
+          </svg>
+          <div class="pie-center">
+            <div class="big">38%</div>
+            <div class="small">of your<br/>revenue</div>
+          </div>
+        </div>
+        <div class="pie-legend">
+          <div class="pie-legend-item">
+            <div class="legend-dot" style="background:#D4A017"></div>
+            <span>Where your email revenue <em>should</em> be (30–40%)</span>
+          </div>
+          <div class="pie-legend-item">
+            <div class="legend-dot" style="background:#8B2020"></div>
+            <span>Revenue you're currently leaving on the table</span>
+          </div>
+          <div class="pie-legend-item">
+            <div class="legend-dot" style="background:#333330"></div>
+            <span>Where most brands currently sit (8–15%)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-content fade-up">
+        <div class="gold-line left" style="margin-bottom:20px"></div>
+        <span class="label">The problem</span>
+        <h2 style="margin:12px 0 20px">You're Paying For<br/>Customers Twice</h2>
+        <p>
+          You're spending thousands every month on Meta and Google to acquire customers — then letting them go cold. Your email list is a gold mine you've already paid for, and right now it's sitting idle.
+        </p>
+        <p>
+          The brands hitting 35–40% email revenue aren't luckier than you. They have a system. Automated flows that run 24/7. Campaigns that land in the inbox, not the promotions tab. A retention engine built to compound over time.
+        </p>
+        <ul class="pain-list">
+          <li><span class="icon">✕</span> Abandoned cart flows that never got set up</li>
+          <li><span class="icon">✕</span> Campaigns going out once a month (if that)</li>
+          <li><span class="icon">✕</span> No segmentation — same email to everyone</li>
+          <li><span class="icon">✕</span> List getting cold and unsubscribes creeping up</li>
+          <li><span class="icon">✕</span> No clarity on what email is actually generating</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">What We Do</span>
+      <h2 style="margin:12px 0">We Own Your<br/>Retention Channel</h2>
+      <p>You run your business. We run your email. Every flow, every campaign, every segment — done for you, start to finish.</p>
+    </div>
+
+    <div class="services-grid fade-up">
+      <!-- 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Email Flows</h3>
+        <p>Every automated sequence your store needs — welcome series, abandoned cart, browse abandonment, post-purchase, winback, and more. Built in Klaviyo, designed to convert.</p>
+        <span class="service-tag">Klaviyo</span>
+      </div>
+      <!-- 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Campaign Management</h3>
+        <p>Consistent, on-brand email campaigns built around your calendar — launches, promos, seasonal pushes, and evergreen sends. Copy, design, send, report. All handled.</p>
+        <span class="service-tag">Weekly Sends</span>
+      </div>
+      <!-- 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .93h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>SMS Marketing</h3>
+        <p>Text message campaigns and flows that hit 98% open rates. Integrated with your email strategy so every touchpoint feels coordinated, not spammy.</p>
+        <span class="service-tag">Postscript / Attentive</span>
+      </div>
+      <!-- 4 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>List Segmentation</h3>
+        <p>VIPs, at-risk customers, first-time buyers, big spenders — we segment your list so every email is relevant. Relevance means higher open rates, higher clicks, more revenue.</p>
+        <span class="service-tag">RFM Segmentation</span>
+      </div>
+      <!-- 5 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Deliverability & List Health</h3>
+        <p>Inbox placement is everything. We monitor your sender reputation, clean your list, manage suppression, and ensure your emails actually arrive — not the spam folder.</p>
+        <span class="service-tag">Ongoing</span>
+      </div>
+      <!-- 6 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="20" x2="12" y2="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="20" x2="6" y2="14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Reporting & Attribution</h3>
+        <p>Monthly reporting that shows exactly what email generated in revenue. No vanity metrics — just clear attribution, what's working, and what we're optimizing next.</p>
+        <span class="service-tag">Monthly Reports</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RESULTS
+══════════════════════════════════════════ -->
+<section id="results">
+  <div class="container">
+    <div class="results-header fade-up">
+      <div>
+        <span class="label">Results</span>
+        <h2 style="margin-top:12px">Numbers Don't Lie</h2>
+      </div>
+      <p>Every brand we work with gets a custom strategy built around their catalog, customer base, and growth stage. Here's what that looks like in practice.</p>
+    </div>
+
+    <div class="big-stats fade-up">
+      <div class="stat-box">
+        <div class="stat-num">$14<span>M+</span></div>
+        <div class="stat-label">Email revenue attributed to our work</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">50<span>+</span></div>
+        <div class="stat-label">Shopify brands we've scaled</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">38<span>%</span></div>
+        <div class="stat-label">Average email revenue share — vs. 12% industry avg</div>
+      </div>
+    </div>
+
+    <div class="case-grid fade-up">
+      <!-- Case 1 -->
+      <div class="case-card">
+        <div class="case-brand">Health &amp; Wellness Brand</div>
+        <div class="case-result">$91K</div>
+        <div class="case-desc">Additional monthly revenue from email</div>
+        <div class="case-detail">
+          Came in with a single welcome email and zero flows. We built out a full 12-flow library, launched weekly campaigns, and segmented their 40K list. Email went from 6% to 41% of total revenue.
+        </div>
+        <span class="case-timeframe">⏱ 90 days</span>
+      </div>
+      <!-- Case 2 -->
+      <div class="case-card">
+        <div class="case-brand">DTC Apparel Brand</div>
+        <div class="case-result">3.4×</div>
+        <div class="case-desc">Email revenue multiplier in 6 months</div>
+        <div class="case-detail">
+          Their abandoned cart flow alone generates $23K/month on autopilot. Combined with a browse abandonment sequence and VIP loyalty campaigns, email now drives 34% of their revenue.
+        </div>
+        <span class="case-timeframe">⏱ 6 months</span>
+      </div>
+      <!-- Case 3 -->
+      <div class="case-card">
+        <div class="case-brand">Home Goods Brand</div>
+        <div class="case-result">47%</div>
+        <div class="case-desc">Of all revenue now from email &amp; SMS</div>
+        <div class="case-detail">
+          Was spending $15K/month on Meta with declining ROAS. We rebuilt their retention stack, added SMS, and they've been able to cut ad spend by 30% while growing total revenue 18% YoY.
+        </div>
+        <span class="case-timeframe">⏱ 4 months</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROCESS
+══════════════════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">How It Works</span>
+      <h2 style="margin:12px 0">Up &amp; Running<br/>In 30 Days</h2>
+      <p>No 3-month onboarding. No 90-day "discovery." We move fast because you're already leaving money on the table.</p>
+    </div>
+
+    <div class="process-steps fade-up">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-label">Free</div>
+        <h3>Email Audit</h3>
+        <p>We dig into your Klaviyo account, benchmark you against top performers in your niche, and show you exactly where you're leaking revenue. No strings attached.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-label">Week 1</div>
+        <h3>Strategy &amp; Setup</h3>
+        <p>Custom 90-day retention roadmap built for your brand. We get access, get briefed on your voice and products, and start building immediately.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-label">Week 2–4</div>
+        <h3>Flows Go Live</h3>
+        <p>Core flows launched, campaigns scheduled, segmentation built. Within 30 days, your retention engine is running and generating attributable revenue.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-label">Ongoing</div>
+        <h3>Optimize &amp; Scale</h3>
+        <p>Monthly reporting, A/B testing, new flow additions, and strategy sessions. We continuously push your email revenue share higher every single month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHY US
+══════════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="fade-up">
+        <span class="label">Why EcomKings</span>
+        <h2 style="margin:12px 0 32px">We Only Do<br/>Ecommerce</h2>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="why-point-content">
+              <h4>Ecommerce-only. No generalists.</h4>
+              <p>We don't work with B2B SaaS, restaurants, or real estate. Every client is a Shopify or DTC brand. That focus makes us sharper than a full-service agency.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="why-point-content">
+              <h4>We write the copy. We design the emails.</h4>
+              <p>No outsourcing copy to you or a freelancer. Our team handles everything — strategy, copy, design, build, send. You review and approve.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="why-point-content">
+              <h4>Month-to-month. You're not locked in.</h4>
+              <p>No 6-month contracts. No exit fees. We earn your business every single month. If we're not delivering, you walk. That's how it should be.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="why-point-content">
+              <h4>You own everything. Always.</h4>
+              <p>Your Klaviyo account, your flows, your templates. If you ever leave, you keep 100% of the work we've built. It's yours.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="why-point-content">
+              <h4>Real ecommerce experience — not theory.</h4>
+              <p>Our team has run Shopify stores, managed ad accounts, and shipped products. We understand your business because we've lived it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <span>Feature</span>
+            <span class="ek-col">EcomKings</span>
+            <span>Typical Agency</span>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Ecommerce-only focus</div>
+            <div class="val yes">✓</div>
+            <div class="val no">✕</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Copy + design included</div>
+            <div class="val yes">✓</div>
+            <div class="val no">✕</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Month-to-month contracts</div>
+            <div class="val yes">✓</div>
+            <div class="val no">✕</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">You own all assets</div>
+            <div class="val yes">✓</div>
+            <div class="val no">✕</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Live in 30 days</div>
+            <div class="val yes">✓</div>
+            <div class="val no">✕</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Dedicated strategist</div>
+            <div class="val yes">✓</div>
+            <div class="val no">–</div>
+          </div>
+          <div class="comparison-row">
+            <div class="feature">Revenue-based reporting</div>
+            <div class="val yes">✓</div>
+            <div class="val no">–</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRICING
+══════════════════════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">Pricing</span>
+      <h2 style="margin:12px 0">Simple, Transparent<br/>No Surprises</h2>
+      <p>One flat monthly retainer. No rev-share on top. No setup fees. No hidden costs.</p>
+    </div>
+
+    <div class="pricing-grid fade-up">
+      <!-- Foundation -->
+      <div class="price-card">
+        <div class="price-tier">Foundation</div>
+        <div class="price-name">Starter</div>
+        <div class="price-target">Stores doing $20K–$100K/mo</div>
+        <div class="price-amount">
+          <span class="amount">$2,500</span><span class="per">/mo</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="chk">✓</span> Up to 5 automated email flows</li>
+          <li><span class="chk">✓</span> 4 campaign sends per month</li>
+          <li><span class="chk">✓</span> Core segmentation setup</li>
+          <li><span class="chk">✓</span> Klaviyo account audit &amp; cleanup</li>
+          <li><span class="chk">✓</span> Monthly performance report</li>
+          <li><span class="chk">✓</span> Email copy + design included</li>
+        </ul>
+        <a href="#cta-final" class="btn btn-ghost price-cta">Get Started →</a>
+      </div>
+
+      <!-- Growth (featured) -->
+      <div class="price-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="price-tier">Growth</div>
+        <div class="price-name">Pro</div>
+        <div class="price-target">Stores doing $100K–$500K/mo</div>
+        <div class="price-amount">
+          <span class="amount">$4,500</span><span class="per">/mo</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="chk">✓</span> Full 10-flow library (all key sequences)</li>
+          <li><span class="chk">✓</span> 8 campaign sends per month</li>
+          <li><span class="chk">✓</span> Advanced RFM segmentation</li>
+          <li><span class="chk">✓</span> SMS flows + 2 campaigns/mo</li>
+          <li><span class="chk">✓</span> A/B testing program</li>
+          <li><span class="chk">✓</span> Dedicated account strategist</li>
+          <li><span class="chk">✓</span> Bi-weekly strategy calls</li>
+          <li><span class="chk">✓</span> Monthly revenue attribution report</li>
+        </ul>
+        <a href="#cta-final" class="btn btn-primary price-cta">Get Started →</a>
+      </div>
+
+      <!-- Scale -->
+      <div class="price-card">
+        <div class="price-tier">Scale</div>
+        <div class="price-name">Enterprise</div>
+        <div class="price-target">Stores doing $500K+/mo</div>
+        <div class="price-amount">
+          <span class="amount">$7,500</span><span class="per">/mo</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="chk">✓</span> Everything in Growth</li>
+          <li><span class="chk">✓</span> 12+ campaigns per month</li>
+          <li><span class="chk">✓</span> Full SMS program management</li>
+          <li><span class="chk">✓</span> VIP loyalty sequence design</li>
+          <li><span class="chk">✓</span> Email + landing page CRO</li>
+          <li><span class="chk">✓</span> Weekly strategy calls</li>
+          <li><span class="chk">✓</span> Priority support &amp; Slack access</li>
+          <li><span class="chk">✓</span> Quarterly growth roadmap</li>
+        </ul>
+        <a href="#cta-final" class="btn btn-ghost price-cta">Get Started →</a>
+      </div>
+    </div>
+
+    <p class="price-note fade-up">
+      Not sure which is right? <span>Start with a free audit</span> — we'll tell you exactly what tier makes sense for your store.
+      <br/>All plans are <span>month-to-month</span>. Cancel anytime.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">Client Stories</span>
+      <h2 style="margin:12px 0">Straight From<br/>Our Clients</h2>
+    </div>
+
+    <div class="testi-grid fade-up">
+      <div class="testi-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testi-quote">"We were doing maybe $8K/month from email before EcomKings. Within 90 days we hit $34K. The ROI is absurd — it's the best money we spend on marketing by far."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div>
+            <div class="testi-name">Marcus R.</div>
+            <div class="testi-role">Founder, supplement brand · $2.1M ARR</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testi-quote">"I'd tried two other Klaviyo agencies before. EcomKings is in a different league. They actually understand ecommerce — not just email. They think about our whole customer journey."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SK</div>
+          <div>
+            <div class="testi-name">Sarah K.</div>
+            <div class="testi-role">CEO, apparel brand · Shopify Plus</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testi-quote">"The fact that there's no long-term contract told me everything I needed to know. They're confident in their work. 6 months later, email is 39% of our revenue and climbing."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JT</div>
+          <div>
+            <div class="testi-name">James T.</div>
+            <div class="testi-role">Owner, home goods brand · 7-figure Shopify</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">FAQ</span>
+      <h2 style="margin:12px 0">Common Questions</h2>
+    </div>
+
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What email platform do you work with?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">We primarily build in Klaviyo — it's the industry standard for Shopify brands and the most powerful platform for segmentation and flows. We also work with Postscript and Attentive for SMS. If you're on a different platform, reach out and we'll let you know if it's a fit.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How quickly will we see results?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">Most clients see measurable email revenue within the first 30 days — that's when core flows go live and start running. Bigger gains compound over 60–90 days as we optimize, add flows, and refine segmentation. We're transparent about timelines from day one.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Do I need to provide copy or design assets?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">No. We handle copy, design, and build entirely. You'll get a brand brief process during onboarding so we learn your voice, products, and audience — after that, we produce everything. You review and approve before anything goes live.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What if I already have flows set up in Klaviyo?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">That's great — we'll audit what you have, keep what's working, rebuild what isn't, and fill the gaps. We don't blow up working systems. Starting from something is always better than starting from zero.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is there a setup fee or minimum contract?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">No setup fee, no minimum contract length. Every plan is month-to-month. We charge the same from month one because we move fast — typically you have flows live within the first 2–3 weeks.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What size stores do you work with?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">Our sweet spot is Shopify brands doing $20K–$1M+ per month in revenue. Smaller stores can still benefit, but the ROI is most dramatic once you have meaningful list size and order volume to work with. The free audit will give you an honest read on whether we're the right fit.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Do I own the flows and templates you build?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">100%. Everything we build is in your Klaviyo account under your ownership. If you ever leave, you keep every flow, every template, every segment. No holdbacks, no access revocations. It's your asset.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How many clients do you take per month?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a">We cap new client intake at 5 per month to protect quality. Each brand gets proper attention — not a conveyor belt. If we're at capacity, we'll put you on a short waitlist and give you an honest timeline.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-final-inner fade-up">
+      <span class="label">Free Email Audit</span>
+      <h2>Find Out How Much<br/>Your List Is Worth</h2>
+      <p>
+        We'll audit your Klaviyo account, benchmark your performance against top brands in your niche, and show you the exact revenue you're leaving on the table — for free, within 48 hours.
+      </p>
+
+      <form class="audit-form" name="free-audit" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="free-audit" />
+        <input type="text" id="name-input" name="name" placeholder="Your name" autocomplete="name" required />
+        <input type="tel" id="phone-input" name="phone" placeholder="Phone number" autocomplete="tel" required />
+        <input type="email" id="email-input" name="email" placeholder="Email address" autocomplete="email" required />
+        <button type="submit" class="btn btn-primary btn-lg">Get Free Audit →</button>
+      </form>
+
+      <div class="cta-trust-row">
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          No obligation
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/><polyline points="12 6 12 12 16 14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Results in 48 hrs
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          100% free
+        </div>
+        <div class="cta-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Spots limited — 5/mo
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:8px;display:inline-flex">
+          <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="7" fill="#D4A017" fill-opacity="0.1"/>
+            <rect x="0.5" y="0.5" width="35" height="35" rx="6.5" stroke="#D4A017" stroke-opacity="0.3"/>
+            <path d="M7 24L9.5 13L15 19L18 11L21 19L26.5 13L29 24H7Z" fill="#D4A017" opacity="0.9"/>
+            <rect x="7" y="25" width="22" height="2.5" rx="1.25" fill="#D4A017"/>
+            <circle cx="18" cy="11" r="1.5" fill="#fff" opacity="0.9"/>
+            <circle cx="9.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="26.5" cy="13" r="1.2" fill="#fff" opacity="0.7"/>
+          </svg>
+          <span class="logo-text" style="font-size:18px">Ecom<span>Kings</span></span>
+        </a>
+        <div class="footer-copy">© 2026 EcomKings. All rights reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#cta-final">Get Audit</a>
+        <a href="mailto:hello@ecomkings.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     JS
+══════════════════════════════════════════ -->
+<script>
+  // ── FAQ toggle ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── Scroll fade-in ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Form ──
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data = new URLSearchParams({
+      'form-name': 'free-audit',
+      name: document.getElementById('name-input').value,
+      phone: document.getElementById('phone-input').value,
+      email: document.getElementById('email-input').value,
+    });
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data.toString(),
+    })
+      .then(() => {
+        form.innerHTML = '<p style="color:var(--gold);font-size:1.1rem;font-weight:600;text-align:center;">✓ Got it — we\'ll reach out within 48 hrs!</p>';
+      })
+      .catch(() => {
+        btn.textContent = 'Get Free Audit →';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      });
+  }
+
+  // ── Nav active link highlight ──
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
