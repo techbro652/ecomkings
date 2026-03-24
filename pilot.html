@@ -1091,9 +1091,7 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data.toString(),
     })
-      .then(() => {
-        form.innerHTML = '<p style="color:var(--gold);font-size:1.15rem;font-weight:600;text-align:center;padding:32px 0;">✓ Application received — we\'ll be in touch within 24 hours.</p>';
-      })
+      .then(() => { window.location.href = '/thank-you'; })
       .catch(() => {
         btn.textContent = 'Apply for the Last Free Spot →';
         btn.disabled = false;
