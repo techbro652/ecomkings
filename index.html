@@ -1847,9 +1847,7 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data.toString(),
     })
-      .then(() => {
-        form.innerHTML = '<p style="color:var(--gold);font-size:1.1rem;font-weight:600;text-align:center;">✓ Got it — we\'ll reach out within 48 hrs!</p>';
-      })
+      .then(() => { window.location.href = '/thank-you'; })
       .catch(() => {
         btn.textContent = 'Get Free Audit →';
         btn.disabled = false;
