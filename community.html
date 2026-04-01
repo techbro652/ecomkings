@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w3fi6rtqnb");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcomKings Community — The Private Group for Ecommerce Store Owners</title>
+  <meta name="description" content="Join the EcomKings Community — weekly live calls, direct access to an experienced ecommerce operator, peer discussions, and a network of store owners all building together. $97/month, cancel anytime." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:     #D4A017;
+      --gold-dim: #a87d10;
+      --gold-glow: rgba(212,160,23,0.12);
+      --bg:       #080808;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #252520;
+      --text:     #F0EFE8;
+      --muted:    #7A7A72;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    h1, h2, h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(52px, 9vw, 110px); font-weight: 800; }
+    h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; }
+    h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 600; }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; }
+
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--gold);
+      color: #080808;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: #e8b520; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent;
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 4px;
+      border: 1.5px solid var(--gold);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+    .btn-outline:hover { background: var(--gold-glow); transform: translateY(-1px); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1160px; margin: 0 auto; padding: 0 24px;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+    .nav-price {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 100px 0 88px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.25);
+      padding: 7px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-badge span { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero h1 { margin-bottom: 24px; max-width: 900px; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.65;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .hero-cta-row {
+      display: flex; align-items: center; gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .hero-proof {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .hero-proof-dot { width: 4px; height: 4px; background: var(--border); border-radius: 50%; }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-bar-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .trust-stat { text-align: center; }
+    .trust-stat .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .trust-stat .desc {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+    .trust-divider { width: 1px; height: 48px; background: var(--border); }
+
+    /* ─── WHAT YOU GET ─── */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .include-card {
+      background: var(--surface);
+      padding: 36px 32px;
+      transition: background 0.2s;
+    }
+    .include-card:hover { background: var(--surface2); }
+    .include-icon {
+      width: 44px; height: 44px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .include-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: none;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0;
+    }
+    .include-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ─── ABOUT CHRIS ─── */
+    .about-section { border-top: 1px solid var(--border); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-img-placeholder img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .about-accent {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--gold);
+      color: #080808;
+      padding: 20px 24px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .about-accent .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .about-accent .desc {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .about-content .label { margin-bottom: 16px; display: block; }
+    .about-content h2 { margin-bottom: 24px; }
+    .about-content p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .about-creds {
+      display: flex; flex-direction: column; gap: 12px;
+      margin-top: 32px;
+    }
+    .about-cred {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .about-cred-icon {
+      color: var(--gold);
+      font-size: 16px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .about-cred p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .about-cred strong { color: var(--text); }
+
+    /* ─── WEEKLY CALL ─── */
+    .call-section { border-top: 1px solid var(--border); }
+    .call-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .call-content .label { display: block; margin-bottom: 16px; }
+    .call-content h2 { margin-bottom: 24px; }
+    .call-content p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .call-details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+    }
+    .call-detail-row {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .call-detail-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .call-detail-row:first-child { padding-top: 0; }
+    .call-detail-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--gold-glow);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .call-detail-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .call-detail-text span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ─── WHO IT'S FOR ─── */
+    .for-section { border-top: 1px solid var(--border); }
+    .for-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 56px;
+    }
+    .for-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .for-check {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+    .for-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .for-card strong { color: var(--text); display: block; font-size: 15px; margin-bottom: 4px; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-section { border-top: 1px solid var(--border); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 56px;
+    }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+    }
+    .testimonial-stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 40px; height: 40px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212,160,23,0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .testimonial-name { font-size: 14px; font-weight: 600; }
+    .testimonial-title { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ─── PRICING ─── */
+    .pricing-section { border-top: 1px solid var(--border); }
+    .pricing-card-wrap {
+      max-width: 520px;
+      margin: 56px auto 0;
+    }
+    .pricing-card {
+      background: var(--surface);
+      border: 1.5px solid var(--gold);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .pricing-header {
+      background: var(--gold);
+      color: #080808;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pricing-header-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .pricing-badge-pill {
+      background: rgba(8,8,8,0.2);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pricing-body { padding: 40px 32px; }
+    .pricing-price {
+      display: flex; align-items: baseline; gap: 6px;
+      margin-bottom: 8px;
+    }
+    .pricing-amount {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--gold);
+    }
+    .pricing-currency {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--gold);
+      align-self: flex-start;
+      margin-top: 12px;
+    }
+    .pricing-period {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .pricing-cancel {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .pricing-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+    }
+    .pricing-features li .check {
+      color: var(--gold);
+      font-size: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .pricing-features li span {
+      color: var(--text);
+    }
+    .pricing-cta {
+      width: 100%;
+      text-align: center;
+      padding: 18px;
+      font-size: 16px;
+    }
+    .pricing-disclaimer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-section { border-top: 1px solid var(--border); }
+    .faq-list {
+      max-width: 720px;
+      margin: 56px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      user-select: none;
+      background: var(--surface);
+      transition: background 0.15s;
+    }
+    .faq-question:hover { background: var(--surface2); }
+    .faq-icon {
+      color: var(--gold);
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+      margin-left: 16px;
+      font-style: normal;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 24px 22px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      background: var(--surface);
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ─── FINAL CTA ─── */
+    .final-cta {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .final-cta h2 { margin-bottom: 16px; }
+    .final-cta h2 em { color: var(--gold); font-style: normal; }
+    .final-cta p {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .final-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .final-cta-fine {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex; gap: 24px; font-size: 13px; color: var(--muted);
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 800px) {
+      .about-grid, .call-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-img-wrap { max-width: 340px; }
+      .about-accent { bottom: -16px; right: -12px; }
+      .trust-divider { display: none; }
+      .trust-bar-inner { justify-content: center; gap: 32px; }
+      .nav-cta .btn-primary { padding: 10px 18px; font-size: 13px; }
+    }
+    @media (max-width: 520px) {
+      h1 { font-size: 48px; }
+      h2 { font-size: 34px; }
+      section { padding: 64px 0; }
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Ecom<span>Kings</span></a>
+    <div class="nav-cta">
+      <span class="nav-price">$97/mo · Cancel anytime</span>
+      <a href="#join" class="btn-primary">Join the Community</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span></span> Now Open · Limited Membership</div>
+    <h1>The Private<br>Community For<br><em>Ecommerce</em><br>Store Owners</h1>
+    <p class="hero-sub">Weekly live calls, direct access to an experienced operator, peer discussions, and a network of store owners all figuring it out together — for $97/month.</p>
+    <div class="hero-cta-row">
+      <a href="#join" class="btn-primary">Join for $97/Month →</a>
+      <a href="#whats-inside" class="btn-outline">See What's Inside</a>
+    </div>
+    <div class="hero-proof">
+      <span>✓ Cancel anytime</span>
+      <span class="hero-proof-dot"></span>
+      <span>✓ No contracts</span>
+      <span class="hero-proof-dot"></span>
+      <span>✓ Weekly live calls</span>
+      <span class="hero-proof-dot"></span>
+      <span>✓ Direct access to Chris</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-stat">
+        <div class="num">10+</div>
+        <div class="desc">Years in Ecommerce</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="num">50+</div>
+        <div class="desc">Brands Worked With</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="num">Weekly</div>
+        <div class="desc">Live Group Calls</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="num">1:1</div>
+        <div class="desc">Direct Message Access</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="num">$97</div>
+        <div class="desc">Per Month, Cancel Anytime</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<section id="whats-inside">
+  <div class="container">
+    <p class="label">Membership Includes</p>
+    <h2>Everything You Get<br>Inside the Community</h2>
+    <div class="includes-grid reveal">
+
+      <div class="include-card">
+        <div class="include-icon">📞</div>
+        <h3>Weekly Live Group Call</h3>
+        <p>Every week, Chris hosts a live group call open to all members. Bring your questions, talk through what you're working on, and get real answers from someone who's been in ecommerce for over a decade. Recordings available if you can't make it live.</p>
+      </div>
+
+      <div class="include-card">
+        <div class="include-icon">💬</div>
+        <h3>Message Chris Directly</h3>
+        <p>As a member, you get direct messaging access to Chris. Running into an issue with your store? Have a question about your email setup, ads, or operations? Message him and get a genuine answer — not a templated reply.</p>
+      </div>
+
+      <div class="include-card">
+        <div class="include-icon">🏪</div>
+        <h3>Ecommerce Advice & Discussion</h3>
+        <p>A constantly active community where members share what's working, ask for feedback, and talk through real challenges — ads, conversions, fulfilment, customer service, tools, and everything in between.</p>
+      </div>
+
+      <div class="include-card">
+        <div class="include-icon">🤝</div>
+        <h3>Meet Other Store Owners</h3>
+        <p>Get around people who are actually building ecommerce stores. Network, share referrals, find collaborators, and learn from operators at every stage — from just starting out to running established brands.</p>
+      </div>
+
+      <div class="include-card">
+        <div class="include-icon">📚</div>
+        <h3>Shared Resources & Frameworks</h3>
+        <p>SOPs, swipe files, tool recommendations, and frameworks Chris uses and has used across dozens of ecommerce brands. Practical, real-world material — not generic business advice.</p>
+      </div>
+
+      <div class="include-card">
+        <div class="include-icon">🎯</div>
+        <h3>Topic-Focused Conversations</h3>
+        <p>Dedicated discussion channels for ads, email & retention, product, operations, tools, and mindset. Stay focused on the topics most relevant to where you are in your business.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT CHRIS -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-placeholder">
+          <img src="/chris-longo.jpg" alt="Chris — EcomKings" />
+        </div>
+        <div class="about-accent">
+          <div class="num">10+</div>
+          <div class="desc">Years in Ecommerce</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="label">Your Host</span>
+        <h2>Real Experience.<br>No Fluff.</h2>
+        <p>Chris has spent over a decade working in ecommerce — building stores, running email programs, managing ad accounts, and helping dozens of brands grow their retention channels.</p>
+        <p>He started EcomKings because most agency owners have never actually run a store. He has. That means the advice inside the community is grounded in what actually works — not theory, not templates.</p>
+        <p>The group call and direct message access give you a shortcut to experience that most ecommerce operators only get after years of expensive trial and error.</p>
+        <div class="about-creds">
+          <div class="about-cred">
+            <span class="about-cred-icon">✦</span>
+            <p><strong>Founded &amp; built EcomKings</strong> — a Klaviyo-certified ecommerce email &amp; retention agency</p>
+          </div>
+          <div class="about-cred">
+            <span class="about-cred-icon">✦</span>
+            <p><strong>Worked with 50+ Shopify brands</strong> across DTC, health &amp; wellness, apparel, and home goods</p>
+          </div>
+          <div class="about-cred">
+            <span class="about-cred-icon">✦</span>
+            <p><strong>Deep expertise in email, retention, ads,</strong> and ecommerce operations</p>
+          </div>
+          <div class="about-cred">
+            <span class="about-cred-icon">✦</span>
+            <p><strong>Has run and operated ecommerce stores</strong> — not just consulted on them</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY CALL -->
+<section class="call-section" id="calls">
+  <div class="container">
+    <div class="call-inner">
+      <div class="call-content reveal">
+        <span class="label">Every Week</span>
+        <h2>The Group Call<br>Is the Core.</h2>
+        <p>Once a week, the whole community gets on a live call together. Chris runs it — no agenda, no slide decks. Just open Q&A, member discussions, and honest conversation about what's happening in ecommerce right now.</p>
+        <p>This is where the community comes alive. Members share wins, talk through problems, get feedback on their stores in real-time, and hear how other operators are handling the same challenges they're facing.</p>
+        <p>Can't make it live? Every call is recorded and posted for members to watch on their own time.</p>
+      </div>
+      <div class="call-details reveal">
+        <div class="call-detail-row">
+          <div class="call-detail-icon">📅</div>
+          <div class="call-detail-text">
+            <strong>Every Week, No Exceptions</strong>
+            <span>Consistent schedule — members always have a touchpoint</span>
+          </div>
+        </div>
+        <div class="call-detail-row">
+          <div class="call-detail-icon">🎙️</div>
+          <div class="call-detail-text">
+            <strong>Live Q&amp;A Format</strong>
+            <span>Bring any question — store-specific, strategy, tools, ads, email</span>
+          </div>
+        </div>
+        <div class="call-detail-row">
+          <div class="call-detail-icon">🎥</div>
+          <div class="call-detail-text">
+            <strong>All Calls Recorded</strong>
+            <span>Can't make it live? Catch the replay in the member library</span>
+          </div>
+        </div>
+        <div class="call-detail-row">
+          <div class="call-detail-icon">🔍</div>
+          <div class="call-detail-text">
+            <strong>Store Reviews &amp; Feedback</strong>
+            <span>Volunteer your store for a live review and get honest, actionable feedback</span>
+          </div>
+        </div>
+        <div class="call-detail-row">
+          <div class="call-detail-icon">💡</div>
+          <div class="call-detail-text">
+            <strong>Current Topics &amp; Trends</strong>
+            <span>What's working in ads, email, and ecommerce right now — updated weekly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="for-section" id="who">
+  <div class="container">
+    <p class="label">Right For You If...</p>
+    <h2>Who This Community<br>Is Built For</h2>
+    <div class="for-grid reveal">
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You run an ecommerce store</strong>
+          <p>Shopify, DTC, marketplace — doesn't matter. You're actively building or operating an online store and want to get better at it.</p>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You're serious about learning</strong>
+          <p>You want real, tactical knowledge — not motivational fluff. You're willing to do the work; you just want better information to guide the decisions.</p>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You want to be around other operators</strong>
+          <p>Building a store can feel isolating. You want to be part of a group of people who understand what you're going through because they're in it too.</p>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You want access to experienced advice</strong>
+          <p>You have questions that Google can't answer. You want to talk to someone who has actually done it — in email, ads, operations, and product.</p>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You're just getting started</strong>
+          <p>New to ecommerce and trying to avoid costly mistakes? The community is a great shortcut to the knowledge it normally takes years to accumulate.</p>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-check">✓</div>
+        <div>
+          <strong>You're already established and want to level up</strong>
+          <p>Running a brand and looking for fresh ideas, peer accountability, and a sounding board? This community is useful at every stage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <p class="label">Community Members</p>
+    <h2>What Members Say</h2>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The weekly call alone is worth the $97. Chris gives honest, no-BS feedback on your actual store. I've gotten more useful advice in two calls than I did from a $2,000 course."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Mike R.</div>
+            <div class="testimonial-title">Shopify store owner · Home goods</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The direct message access to Chris is something I didn't expect to use as much as I do. Whenever I'm unsure about a decision, I just message him. It's like having an experienced operator in your corner."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JK</div>
+          <div>
+            <div class="testimonial-name">Jamie K.</div>
+            <div class="testimonial-title">DTC apparel brand</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Finally — a community where people actually talk about real stuff. Not flexing screenshots, not selling courses. Just store owners helping each other figure things out. Chris sets the tone and it shows."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AL</div>
+          <div>
+            <div class="testimonial-name">Alexis L.</div>
+            <div class="testimonial-title">Health &amp; wellness brand · Shopify</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:12px; color:var(--muted); margin-top:24px;">* Testimonials reflect individual member experiences. Results and outcomes vary based on each member's store, effort, and market.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="join">
+  <div class="container">
+    <p class="label" style="text-align:center;">Simple, Flat Pricing</p>
+    <h2 style="text-align:center;">One Plan.<br>Full Access.</h2>
+    <div class="pricing-card-wrap reveal">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <span class="pricing-header-label">EcomKings Community</span>
+          <span class="pricing-badge-pill">Full Access</span>
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-price">
+            <span class="pricing-currency">$</span>
+            <span class="pricing-amount">97</span>
+          </div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-cancel">Cancel anytime — no contracts, no cancellation fees</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span><span>Weekly live group call with Chris (+ recordings)</span></li>
+            <li><span class="check">✓</span><span>Direct message access to Chris for store advice</span></li>
+            <li><span class="check">✓</span><span>Private community — discussions, questions, peer support</span></li>
+            <li><span class="check">✓</span><span>Network of active ecommerce store owners</span></li>
+            <li><span class="check">✓</span><span>Topic channels: ads, email, operations, product, tools</span></li>
+            <li><span class="check">✓</span><span>Shared resources, SOPs, and frameworks</span></li>
+            <li><span class="check">✓</span><span>Live store reviews and feedback sessions</span></li>
+          </ul>
+          <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary pricing-cta">Join for $97/Month →</a>
+        </div>
+      </div>
+      <p class="pricing-disclaimer">
+        Billed monthly at $97/month. Cancel anytime before your next billing date — no questions asked.<br>
+        By joining, you agree to the <a href="/terms" style="color:var(--gold);">Terms of Service</a> and <a href="/privacy" style="color:var(--gold);">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <p class="label" style="text-align:center;">Common Questions</p>
+    <h2 style="text-align:center;">FAQ</h2>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <div class="faq-question">What exactly is the weekly call? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">Every week Chris hosts a live group video call, open to all members. It's an open Q&A format — members bring questions about their stores, get feedback, and discuss what's happening in ecommerce. Calls are also recorded, so if you can't make it live you can watch the replay at any time.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How does direct messaging with Chris work? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">As a community member, you have access to message Chris directly inside the platform. He responds to member questions personally — store feedback, strategy, tools, email, ads, whatever you're working through. This isn't a support inbox with a team — it's Chris directly.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What kinds of topics does the community cover? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">Anything relevant to running an ecommerce store. Paid advertising (Meta, Google, TikTok), email &amp; retention, Klaviyo, Shopify, product and sourcing, operations and fulfilment, customer service, tools and tech, conversion rate optimization, and general business discussions. Members drive the conversations — it goes wherever the group needs it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I need to be doing a certain revenue level to join? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">No minimum revenue required. The community has members at every stage — from people just launching their first store to established brands doing multiple 7 figures. The advice and discussions are useful regardless of where you are. That said, you'll get the most from it if you're actively working on a store.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I cancel if I decide it's not for me? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">Cancel anytime, directly from your account dashboard — no need to email or call anyone. Your membership stays active until the end of your billing period. No cancellation fees, no exit interviews, no retention tactics. Just cancel and you're done.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Where does the community take place? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">After joining, you'll receive onboarding instructions with access to the private community platform. Weekly calls are hosted via video — you'll get calendar invites and a join link as part of your welcome.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is this like a course or coaching program? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">Neither. It's a community — ongoing, live, and peer-driven. There's no fixed curriculum. It's built around the weekly call and real-time discussions with other operators. Think of it less like a course and more like being part of a professional peer group that happens to include someone very experienced running it.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta-final">
+  <div class="container">
+    <p class="label">Ready to Join?</p>
+    <h2>Stop Figuring It Out<br><em>Alone.</em></h2>
+    <p>Join a private group of ecommerce operators, get weekly access to Chris, and be part of a community that's actually helping each other build better stores.</p>
+    <div class="final-cta-row">
+      <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary" style="font-size:16px; padding:18px 40px;">Join for $97/Month →</a>
+    </div>
+    <p class="final-cta-fine">$97/month · Cancel anytime · No contracts</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Ecom<span>Kings</span></div>
+      <div class="footer-links">
+        <a href="/">Agency</a>
+        <a href="/contact">Contact</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <div class="footer-copy">© 2025 EcomKings. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
