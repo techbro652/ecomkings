@@ -261,32 +261,62 @@
     }
 
     /* ─── ABOUT CHRIS ─── */
-    .about-section { border-top: 1px solid var(--border); background: var(--surface); }
-    .founder-inner {
-      display: grid; grid-template-columns: auto 1fr;
-      gap: 56px; align-items: start;
+    .about-section { border-top: 1px solid var(--border); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
     }
-    .founder-avatar {
-      width: 120px; height: 120px; border-radius: 50%;
-      border: 3px solid var(--gold);
-      overflow: hidden; flex-shrink: 0;
-      box-shadow: 0 0 0 6px rgba(212,160,23,0.12);
+    .about-img-wrap { position: relative; }
+    .about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
     }
-    .founder-avatar img {
+    .about-img-placeholder img {
       width: 100%; height: 100%; object-fit: cover; object-position: center top;
     }
-    .founder-content p { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 680px; }
-    .founder-stats {
-      display: flex; gap: 40px; margin-top: 32px; flex-wrap: wrap;
+    .about-accent {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--gold);
+      color: #080808;
+      padding: 20px 24px;
+      border-radius: 6px;
+      text-align: center;
     }
-    .founder-stat-num {
+    .about-accent .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 38px; font-weight: 800; line-height: 1;
+    }
+    .about-accent .desc {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;
+    }
+    .about-content .label { margin-bottom: 16px; display: block; }
+    .about-content h2 { margin-bottom: 6px; }
+    .about-title { color: var(--gold); font-weight: 600; font-size: 14px; letter-spacing: 0.04em; margin-bottom: 24px; }
+    .about-content p {
+      color: var(--muted); font-size: 16px; line-height: 1.75; margin-bottom: 16px;
+    }
+    .about-stats {
+      display: flex; gap: 32px; flex-wrap: wrap;
+      margin-top: 32px; padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .about-stat-num {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px;
     }
-    .founder-stat-label { font-size: 13px; color: var(--muted); }
-    @media (max-width: 640px) {
-      .founder-inner { grid-template-columns: 1fr; gap: 28px; }
-      .founder-avatar { width: 72px; height: 72px; }
+    .about-stat-label { font-size: 13px; color: var(--muted); }
+    @media (max-width: 800px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-img-wrap { max-width: 340px; }
+      .about-accent { bottom: -16px; right: -12px; }
     }
 
     /* ─── WEEKLY CALL ─── */
@@ -762,28 +792,34 @@
 <!-- ABOUT CHRIS -->
 <section class="about-section" id="about">
   <div class="container">
-    <div class="founder-inner reveal">
-      <div class="founder-avatar">
-        <img src="chris-longo.jpg" alt="Chris Longo" />
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-placeholder">
+          <img src="chris-longo.jpg" alt="Chris Longo — EcomKings" />
+        </div>
+        <div class="about-accent">
+          <div class="num">$30M+</div>
+          <div class="desc">Revenue Built</div>
+        </div>
       </div>
-      <div class="founder-content">
-        <span class="label">Who's behind EcomKings</span>
-        <h2 style="margin:12px 0 4px">Chris Longo</h2>
-        <p style="color:var(--gold);font-weight:600;font-size:14px;margin-bottom:20px;letter-spacing:0.04em;">Founder, EcomKings</p>
+      <div class="about-content reveal">
+        <span class="label">Who's Behind EcomKings</span>
+        <h2>Chris Longo</h2>
+        <p class="about-title">Founder, EcomKings</p>
         <p>Over the past decade, Chris has built and scaled multiple digital businesses to 8 figures in combined revenue — managing millions in paid ad spend across Google, Meta, and beyond. He knows how to turn ad dollars into revenue, how to build conversion systems that actually work, and how to scale a business fast using digital channels.</p>
-        <p style="margin-top:16px;">What sets him apart isn't just the numbers — it's the breadth. Ecommerce, lead gen, info products, direct response — he's driven growth across industries. Now he's bringing that entire playbook into this community, giving ecommerce store owners direct access to a decade of hard-won experience.</p>
-        <div class="founder-stats">
-          <div class="founder-stat">
-            <div class="founder-stat-num">$30M+</div>
-            <div class="founder-stat-label">In revenue &amp; sales built</div>
+        <p>What sets him apart isn't just the numbers — it's the breadth. Ecommerce, lead gen, info products, direct response — he's driven growth across industries. Now he's bringing that entire playbook into this community, giving store owners direct access to a decade of hard-won experience.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-num">$30M+</div>
+            <div class="about-stat-label">In revenue &amp; sales built</div>
           </div>
-          <div class="founder-stat">
-            <div class="founder-stat-num">10+ years</div>
-            <div class="founder-stat-label">Digital growth experience</div>
+          <div class="about-stat">
+            <div class="about-stat-num">10+ years</div>
+            <div class="about-stat-label">Digital growth experience</div>
           </div>
-          <div class="founder-stat">
-            <div class="founder-stat-num">Multi-industry</div>
-            <div class="founder-stat-label">Ecom, lead gen, direct response</div>
+          <div class="about-stat">
+            <div class="about-stat-num">Multi-industry</div>
+            <div class="about-stat-label">Ecom, lead gen, direct response</div>
           </div>
         </div>
       </div>
