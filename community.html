@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://www.paypal.com/sdk/js?client-id=AdknZJfNM2iw9pdyLf7dZQGp1uxUqXFBcJwNV-0rWTwtNPmTHgOBAii3XSU2h4iFyTDjTjBQpqKKnXiJ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 
   <style>
     /* ─── RESET & BASE ─── */
@@ -995,7 +996,7 @@
             <li><span class="check">✓</span><span>Shared resources, SOPs, and frameworks</span></li>
             <li><span class="check">✓</span><span>Live store reviews and feedback sessions</span></li>
           </ul>
-          <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary pricing-cta">Join for $97/Month →</a>
+          <div id="paypal-button-container-pricing" style="margin-top:8px;"></div>
         </div>
       </div>
       <p class="pricing-disclaimer">
@@ -1059,7 +1060,7 @@
     <h2>Stop Figuring It Out<br><em>Alone.</em></h2>
     <p>Join a private group of ecommerce operators, get weekly access to Chris, and be part of a community that's actually helping each other build better stores.</p>
     <div class="final-cta-row">
-      <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary" style="font-size:16px; padding:18px 40px;">Join for $97/Month →</a>
+      <div id="paypal-button-container-final" style="min-width:300px;"></div>
     </div>
     <p class="final-cta-fine">$97/month · Cancel anytime · No contracts</p>
   </div>
@@ -1103,6 +1104,29 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // PayPal subscription buttons
+  function renderPayPalButton(containerId) {
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          plan_id: 'P-5F830725NU077504NNHGVKRQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        window.location.href = '/thank-you';
+      }
+    }).render('#' + containerId);
+  }
+
+  renderPayPalButton('paypal-button-container-pricing');
+  renderPayPalButton('paypal-button-container-final');
 </script>
 
 </body>
