@@ -261,77 +261,33 @@
     }
 
     /* ─── ABOUT CHRIS ─── */
-    .about-section { border-top: 1px solid var(--border); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
+    .about-section { border-top: 1px solid var(--border); background: var(--surface); }
+    .founder-inner {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 56px; align-items: start;
     }
-    .about-img-wrap {
-      position: relative;
+    .founder-avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--gold);
+      overflow: hidden; flex-shrink: 0;
+      box-shadow: 0 0 0 6px rgba(212,160,23,0.12);
     }
-    .about-img-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
+    .founder-avatar img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
     }
-    .about-img-placeholder img {
-      width: 100%; height: 100%; object-fit: cover;
+    .founder-content p { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 680px; }
+    .founder-stats {
+      display: flex; gap: 40px; margin-top: 32px; flex-wrap: wrap;
     }
-    .about-accent {
-      position: absolute;
-      bottom: -20px; right: -20px;
-      background: var(--gold);
-      color: #080808;
-      padding: 20px 24px;
-      border-radius: 6px;
-      text-align: center;
-    }
-    .about-accent .num {
+    .founder-stat-num {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 38px;
-      font-weight: 800;
-      line-height: 1;
+      font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px;
     }
-    .about-accent .desc {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: 4px;
+    .founder-stat-label { font-size: 13px; color: var(--muted); }
+    @media (max-width: 640px) {
+      .founder-inner { grid-template-columns: 1fr; gap: 28px; }
+      .founder-avatar { width: 72px; height: 72px; }
     }
-    .about-content .label { margin-bottom: 16px; display: block; }
-    .about-content h2 { margin-bottom: 24px; }
-    .about-content p {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .about-creds {
-      display: flex; flex-direction: column; gap: 12px;
-      margin-top: 32px;
-    }
-    .about-cred {
-      display: flex; align-items: flex-start; gap: 12px;
-    }
-    .about-cred-icon {
-      color: var(--gold);
-      font-size: 16px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-    .about-cred p {
-      margin: 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .about-cred strong { color: var(--text); }
 
     /* ─── WEEKLY CALL ─── */
     .call-section { border-top: 1px solid var(--border); }
@@ -806,38 +762,28 @@
 <!-- ABOUT CHRIS -->
 <section class="about-section" id="about">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <div class="about-img-placeholder">
-          <img src="/chris-longo.jpg" alt="Chris — EcomKings" />
-        </div>
-        <div class="about-accent">
-          <div class="num">10+</div>
-          <div class="desc">Years in Ecommerce</div>
-        </div>
+    <div class="founder-inner reveal">
+      <div class="founder-avatar">
+        <img src="chris-longo.jpg" alt="Chris Longo" />
       </div>
-      <div class="about-content reveal">
-        <span class="label">Your Host</span>
-        <h2>Real Experience.<br>No Fluff.</h2>
-        <p>Chris has spent over a decade working in ecommerce — building stores, running email programs, managing ad accounts, and helping dozens of brands grow their retention channels.</p>
-        <p>He started EcomKings because most agency owners have never actually run a store. He has. That means the advice inside the community is grounded in what actually works — not theory, not templates.</p>
-        <p>The group call and direct message access give you a shortcut to experience that most ecommerce operators only get after years of expensive trial and error.</p>
-        <div class="about-creds">
-          <div class="about-cred">
-            <span class="about-cred-icon">✦</span>
-            <p><strong>Founded &amp; built EcomKings</strong> — a Klaviyo-certified ecommerce email &amp; retention agency</p>
+      <div class="founder-content">
+        <span class="label">Who's behind EcomKings</span>
+        <h2 style="margin:12px 0 4px">Chris Longo</h2>
+        <p style="color:var(--gold);font-weight:600;font-size:14px;margin-bottom:20px;letter-spacing:0.04em;">Founder, EcomKings</p>
+        <p>Over the past decade, Chris has built and scaled multiple digital businesses to 8 figures in combined revenue — managing millions in paid ad spend across Google, Meta, and beyond. He knows how to turn ad dollars into revenue, how to build conversion systems that actually work, and how to scale a business fast using digital channels.</p>
+        <p style="margin-top:16px;">What sets him apart isn't just the numbers — it's the breadth. Ecommerce, lead gen, info products, direct response — he's driven growth across industries. Now he's bringing that entire playbook into this community, giving ecommerce store owners direct access to a decade of hard-won experience.</p>
+        <div class="founder-stats">
+          <div class="founder-stat">
+            <div class="founder-stat-num">$30M+</div>
+            <div class="founder-stat-label">In revenue &amp; sales built</div>
           </div>
-          <div class="about-cred">
-            <span class="about-cred-icon">✦</span>
-            <p><strong>Worked with 50+ Shopify brands</strong> across DTC, health &amp; wellness, apparel, and home goods</p>
+          <div class="founder-stat">
+            <div class="founder-stat-num">10+ years</div>
+            <div class="founder-stat-label">Digital growth experience</div>
           </div>
-          <div class="about-cred">
-            <span class="about-cred-icon">✦</span>
-            <p><strong>Deep expertise in email, retention, ads,</strong> and ecommerce operations</p>
-          </div>
-          <div class="about-cred">
-            <span class="about-cred-icon">✦</span>
-            <p><strong>Has run and operated ecommerce stores</strong> — not just consulted on them</p>
+          <div class="founder-stat">
+            <div class="founder-stat-num">Multi-industry</div>
+            <div class="founder-stat-label">Ecom, lead gen, direct response</div>
           </div>
         </div>
       </div>
