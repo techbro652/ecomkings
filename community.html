@@ -33,7 +33,7 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <script src="https://www.paypal.com/sdk/js?client-id=AdknZJfNM2iw9pdyLf7dZQGp1uxUqXFBcJwNV-0rWTwtNPmTHgOBAii3XSU2h4iFyTDjTjBQpqKKnXiJ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+
 
   <style>
     /* ─── RESET & BASE ─── */
@@ -1020,7 +1020,7 @@
             <li><span class="check">✓</span><span>Shared resources, SOPs, and frameworks</span></li>
             <li><span class="check">✓</span><span>Live store reviews and feedback sessions</span></li>
           </ul>
-          <div id="paypal-button-container-pricing" style="margin-top:8px;"></div>
+          <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5F830725NU077504NNHGVKRQ" class="btn-primary" style="display:inline-block;margin-top:8px;">Join for $19/Month →</a>
         </div>
       </div>
       <p class="pricing-disclaimer">
@@ -1084,7 +1084,7 @@
     <h2>Stop Figuring It Out<br><em>Alone.</em></h2>
     <p>Join a private group of ecommerce operators, get weekly access to Chris, and be part of a community that's actually helping each other build better stores.</p>
     <div class="final-cta-row">
-      <div id="paypal-button-container-final" style="min-width:300px;"></div>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5F830725NU077504NNHGVKRQ" class="btn-primary" style="display:inline-block;">Join for $19/Month →</a>
     </div>
     <p class="final-cta-fine">$19/month · Cancel anytime · No contracts</p>
   </div>
@@ -1129,28 +1129,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // PayPal subscription buttons
-  function renderPayPalButton(containerId) {
-    paypal.Buttons({
-      style: {
-        shape: 'rect',
-        color: 'gold',
-        layout: 'vertical',
-        label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          plan_id: 'P-5F830725NU077504NNHGVKRQ'
-        });
-      },
-      onApprove: function(data, actions) {
-        window.location.href = '/community-thank-you';
-      }
-    }).render('#' + containerId);
-  }
 
-  renderPayPalButton('paypal-button-container-pricing');
-  renderPayPalButton('paypal-button-container-final');
 </script>
 
 </body>
