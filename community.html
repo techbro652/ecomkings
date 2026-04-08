@@ -11,7 +11,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcomKings Community — The Private Group for Ecommerce Store Owners</title>
-  <meta name="description" content="Join the EcomKings Community — weekly live calls, direct access to an experienced ecommerce operator, peer discussions, and a network of store owners all building together. $19/month, cancel anytime." />
+  <meta name="description" content="Join the EcomKings Community — weekly live calls, direct access to an experienced ecommerce operator, peer discussions, and a network of store owners all building together. Free to join." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -700,7 +700,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo">Ecom<span>Kings</span></a>
     <div class="nav-cta">
-      <span class="nav-price">$19/mo · Cancel anytime</span>
+      <span class="nav-price">Free to Join</span>
       <a href="#join" class="btn-primary">Join the Community</a>
     </div>
   </div>
@@ -711,15 +711,15 @@
   <div class="container">
     <div class="hero-badge"><span></span> Now Open · Limited Membership</div>
     <h1>The Private<br>Community For<br><em>Ecommerce</em><br>Store Owners</h1>
-    <p class="hero-sub">Weekly live calls, direct access to an experienced operator, peer discussions, and a network of store owners all figuring it out together — for $19/month.</p>
+    <p class="hero-sub">Weekly live calls, direct access to an experienced operator, peer discussions, and a network of store owners all figuring it out together — completely free.</p>
     <div class="hero-cta-row">
-      <a href="#join" class="btn-primary">Join for $19/Month →</a>
+      <a href="#join" class="btn-primary">Join Free →</a>
       <a href="#whats-inside" class="btn-outline">See What's Inside</a>
     </div>
     <div class="hero-proof">
-      <span>✓ Cancel anytime</span>
+      <span>✓ Free to join</span>
       <span class="hero-proof-dot"></span>
-      <span>✓ No contracts</span>
+      <span>✓ No credit card required</span>
       <span class="hero-proof-dot"></span>
       <span>✓ Weekly live calls</span>
       <span class="hero-proof-dot"></span>
@@ -753,8 +753,8 @@
       </div>
       <div class="trust-divider"></div>
       <div class="trust-stat">
-        <div class="num">$19</div>
-        <div class="desc">Per Month, Cancel Anytime</div>
+        <div class="num">FREE</div>
+        <div class="desc">No Cost, Join Instantly</div>
       </div>
     </div>
   </div>
@@ -957,7 +957,7 @@
     <div class="testimonials-grid reveal">
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"The weekly call alone is worth the $19. Chris gives honest, no-BS feedback on your actual store. I've gotten more useful advice in two calls than I did from a $2,000 course."</p>
+        <p class="testimonial-text">"The weekly call alone is worth joining. Chris gives honest, no-BS feedback on your actual store. I've gotten more useful advice in two calls than I did from a $2,000 course."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">MR</div>
           <div>
@@ -993,24 +993,22 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- JOIN FORM -->
 <section class="pricing-section" id="join">
   <div class="container">
-    <p class="label" style="text-align:center;">Simple, Flat Pricing</p>
-    <h2 style="text-align:center;">One Plan.<br>Full Access.</h2>
+    <p class="label" style="text-align:center;">Free to Join</p>
+    <h2 style="text-align:center;">Get Instant Access.<br>No Cost.</h2>
     <div class="pricing-card-wrap reveal">
       <div class="pricing-card">
         <div class="pricing-header">
           <span class="pricing-header-label">EcomKings Community</span>
-          <span class="pricing-badge-pill">Full Access</span>
+          <span class="pricing-badge-pill">Free Access</span>
         </div>
         <div class="pricing-body">
           <div class="pricing-price">
-            <span class="pricing-currency">$</span>
-            <span class="pricing-amount">19</span>
+            <span class="pricing-amount" style="font-size:56px;">FREE</span>
           </div>
-          <div class="pricing-period">per month</div>
-          <div class="pricing-cancel">Cancel anytime — no contracts, no cancellation fees</div>
+          <div class="pricing-cancel" style="margin-top:8px;">No credit card required · Join instantly</div>
           <ul class="pricing-features">
             <li><span class="check">✓</span><span>Weekly live group call with Chris (+ recordings)</span></li>
             <li><span class="check">✓</span><span>Direct message access to Chris for store advice</span></li>
@@ -1020,11 +1018,64 @@
             <li><span class="check">✓</span><span>Shared resources, SOPs, and frameworks</span></li>
             <li><span class="check">✓</span><span>Live store reviews and feedback sessions</span></li>
           </ul>
-          <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5F830725NU077504NNHGVKRQ" class="btn-primary" style="display:inline-block;margin-top:8px;">Join for $19/Month →</a>
+
+          <form
+            name="community-join"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            id="join-form"
+            style="margin-top:8px;"
+          >
+            <input type="hidden" name="form-name" value="community-join" />
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div>
+                <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">Full Name</label>
+                <input
+                  type="text"
+                  name="full-name"
+                  placeholder="Your full name"
+                  required
+                  style="width:100%; background:var(--bg); border:1.5px solid var(--border); border-radius:6px; padding:14px 16px; color:var(--text); font-family:'Inter',sans-serif; font-size:15px; outline:none; transition:border-color 0.2s;"
+                  onfocus="this.style.borderColor='var(--gold)'"
+                  onblur="this.style.borderColor='var(--border)'"
+                />
+              </div>
+              <div>
+                <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  style="width:100%; background:var(--bg); border:1.5px solid var(--border); border-radius:6px; padding:14px 16px; color:var(--text); font-family:'Inter',sans-serif; font-size:15px; outline:none; transition:border-color 0.2s;"
+                  onfocus="this.style.borderColor='var(--gold)'"
+                  onblur="this.style.borderColor='var(--border)'"
+                />
+              </div>
+              <div>
+                <label style="display:block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+1 (555) 000-0000"
+                  required
+                  style="width:100%; background:var(--bg); border:1.5px solid var(--border); border-radius:6px; padding:14px 16px; color:var(--text); font-family:'Inter',sans-serif; font-size:15px; outline:none; transition:border-color 0.2s;"
+                  onfocus="this.style.borderColor='var(--gold)'"
+                  onblur="this.style.borderColor='var(--border)'"
+                />
+              </div>
+              <button type="submit" class="btn-primary pricing-cta" style="margin-top:4px; width:100%; justify-content:center;">
+                Join the Community Free →
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <p class="pricing-disclaimer">
-        Billed monthly at $19/month. Cancel anytime before your next billing date — no questions asked.<br>
+        Free to join. No credit card required.<br>
         By joining, you agree to the <a href="/terms" style="color:var(--gold);">Terms of Service</a> and <a href="/privacy" style="color:var(--gold);">Privacy Policy</a>.
       </p>
     </div>
@@ -1059,8 +1110,8 @@
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">How do I cancel if I decide it's not for me? <i class="faq-icon">+</i></div>
-        <div class="faq-answer">Cancel anytime, directly from your account dashboard — no need to email or call anyone. Your membership stays active until the end of your billing period. No cancellation fees, no exit interviews, no retention tactics. Just cancel and you're done.</div>
+        <div class="faq-question">Is this really free? What's the catch? <i class="faq-icon">+</i></div>
+        <div class="faq-answer">Yes, it's free. No credit card, no trial period — just join. The community is Chris's way of giving operators direct access to real experience without a paywall. If you want to work with EcomKings more closely, that's a conversation you can have once you're inside.</div>
       </div>
 
       <div class="faq-item">
@@ -1084,9 +1135,9 @@
     <h2>Stop Figuring It Out<br><em>Alone.</em></h2>
     <p>Join a private group of ecommerce operators, get weekly access to Chris, and be part of a community that's actually helping each other build better stores.</p>
     <div class="final-cta-row">
-      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5F830725NU077504NNHGVKRQ" class="btn-primary" style="display:inline-block;">Join for $19/Month →</a>
+      <a href="#join" class="btn-primary" style="display:inline-block;">Join Free →</a>
     </div>
-    <p class="final-cta-fine">$19/month · Cancel anytime · No contracts</p>
+    <p class="final-cta-fine">Free to join · No credit card required</p>
   </div>
 </section>
 
@@ -1107,6 +1158,30 @@
 </footer>
 
 <script>
+  // Lead form submit → Netlify capture + redirect to Skool
+  const joinForm = document.getElementById('join-form');
+  if (joinForm) {
+    joinForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = joinForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Joining...';
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData(joinForm);
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString(),
+        });
+      } catch (err) {
+        // silently continue — don't block the redirect if Netlify fetch fails
+      }
+
+      window.location.href = 'https://www.skool.com/ecomkings-7827';
+    });
+  }
+
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
